@@ -26,6 +26,7 @@ namespace AbstractFactoryPattern
 
             Console.WriteLine(productB.UsefulFunctionB());
             Console.WriteLine(productB.AnotherUsefulFunctionB(productA));
+            Console.WriteLine(productA.UsefulFunctionA());
         }
     }
 }
