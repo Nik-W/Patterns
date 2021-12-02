@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecoratorPattern", "Decorat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern", "AdapterPattern\AdapterPattern.csproj", "{8D7D2FE5-BBC8-400C-B28F-85B06DE04175}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoС_DI_Pattern", "IoС_DI_Pattern\IoС_DI_Pattern.csproj", "{FD0F8EDE-0DF3-412E-94F2-12984A754A16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorPattern", "MediatorPattern\MediatorPattern.csproj", "{8FE1DB6E-0CC0-46D0-B191-372A5A3A56F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{8D7D2FE5-BBC8-400C-B28F-85B06DE04175}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D7D2FE5-BBC8-400C-B28F-85B06DE04175}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D7D2FE5-BBC8-400C-B28F-85B06DE04175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD0F8EDE-0DF3-412E-94F2-12984A754A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0F8EDE-0DF3-412E-94F2-12984A754A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0F8EDE-0DF3-412E-94F2-12984A754A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD0F8EDE-0DF3-412E-94F2-12984A754A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE1DB6E-0CC0-46D0-B191-372A5A3A56F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE1DB6E-0CC0-46D0-B191-372A5A3A56F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE1DB6E-0CC0-46D0-B191-372A5A3A56F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE1DB6E-0CC0-46D0-B191-372A5A3A56F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
