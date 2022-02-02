@@ -19,24 +19,24 @@ namespace MediatorPattern
     class ConcreteMediator : IMediator
     {
         /// <summary>
-        /// Компонент 1.
+        /// Contact.
         /// </summary>
-        private Component1 _component1;
+        private Contact _contact;
 
         /// <summary>
-        /// Компонент 2.
+        /// Account.
         /// </summary>
-        private Component2 _component2;
+        private Account _account;
 
         /// <summary>
         /// Создание экземпляра Посредника.
         /// </summary>
-        public ConcreteMediator(Component1 component1, Component2 component2)
+        public ConcreteMediator(Contact contact, Account account)
         {
-            this._component1 = component1;
-            this._component1.SetMediator(this);
-            this._component2 = component2;
-            this._component2.SetMediator(this);
+            this._contact = contact;
+            this._contact.SetMediator(this);
+            this._account = account;
+            this._account.SetMediator(this);
         }
 
         /// <inheritdoc />
@@ -46,12 +46,12 @@ namespace MediatorPattern
             {
                 case "A":
                     Console.WriteLine("Посредник среагировал на A:");
-                    _component2.DoC();
+                    _account.DoC();
                     break;
                 case "D":
                     Console.WriteLine("Посредник среагировал на D:");
-                    _component1.DoB();
-                    _component2.DoC();
+                    _contact.DoB();
+                    _account.DoC();
                     break;
             }
         }

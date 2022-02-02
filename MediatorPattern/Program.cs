@@ -7,13 +7,13 @@ namespace MediatorPattern
         static void Main(string[] args)
         {
             // Клиентский код.
-            Component1 component1 = new Component1();
-            Component2 component2 = new Component2();
-            new ConcreteMediator(component1, component2);
+            Contact contact = new Contact();
+            Account account = new Account();
+            new ConcreteMediator(contact, account);
 
-            component1.DoA();
+            contact.DoA();
             Console.WriteLine();
-            component2.DoD();
+            account.DoD();
             Console.ReadLine();
         }
     }

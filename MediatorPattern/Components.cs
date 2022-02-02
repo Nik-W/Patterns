@@ -5,7 +5,7 @@ namespace MediatorPattern
     /// <summary>
     /// Базовый Компонент
     /// </summary>
-    class BaseComponent
+    class BaseEntity
     {
         /// <summary>
         /// Посредник.
@@ -15,7 +15,7 @@ namespace MediatorPattern
         /// <summary>
         /// Создание экземпляра компонента.
         /// </summary>
-        public BaseComponent(IMediator mediator = null)
+        public BaseEntity(IMediator mediator = null)
         {
             this._mediator = mediator;
         }
@@ -30,16 +30,16 @@ namespace MediatorPattern
     }
 
     /// <summary>
-    /// Компонент 1.
+    /// Contact.
     /// </summary>
-    class Component1 : BaseComponent
+    class Contact : BaseEntity
     {
         /// <summary>
-        /// Функциональность A.
+        /// Функциональность А.
         /// </summary>
         public void DoA()
         {
-            Console.WriteLine("Функциональность A Компонента 1.");
+            Console.WriteLine("Функциональность A Contact.");
             _mediator.Notify(this, "A");
         }
 
@@ -48,22 +48,22 @@ namespace MediatorPattern
         /// </summary>
         public void DoB()
         {
-            Console.WriteLine("Функциональность B Компонента 1.");
+            Console.WriteLine("Функциональность B Contact.");
             _mediator.Notify(this, "B");
         }
     }
 
     /// <summary>
-    /// Компонент 2.
+    /// Account.
     /// </summary>
-    class Component2 : BaseComponent
+    class Account : BaseEntity
     {
         /// <summary>
         /// Функциональность C.
         /// </summary>
         public void DoC()
         {
-            Console.WriteLine("Функциональность C Компонента 2.");
+            Console.WriteLine("Функциональность C Account.");
             _mediator.Notify(this, "C");
         }
 
@@ -72,7 +72,7 @@ namespace MediatorPattern
         /// </summary>
         public void DoD()
         {
-            Console.WriteLine("Функциональность D Компонента 2.");
+            Console.WriteLine("Функциональность D Account.");
             _mediator.Notify(this, "D");
         }
     }

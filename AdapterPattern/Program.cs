@@ -6,10 +6,10 @@ namespace AdapterPattern
     {
         static void Main(string[] args)
         {
-            Adaptee adaptee = new Adaptee();
-            ITarget target = new Adapter(adaptee);
+            ContactAdaptee contactAdaptee = new ContactAdaptee();
+            ITarget target = new Adapter(contactAdaptee);
 
-            Console.WriteLine(adaptee.GetSpecificRequest());
+            Console.WriteLine(contactAdaptee.GetSpecificRequest());
             Console.WriteLine(target.GetRequest());
 
             Console.ReadLine();

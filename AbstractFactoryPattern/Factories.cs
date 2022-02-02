@@ -1,34 +1,34 @@
 ﻿namespace AbstractFactoryPattern
 {
     /// <summary>
-    /// Конкретная фабрика 1, гарантирующая совместимость полученных продуктов.
+    /// Фабрика видео файлов, гарантирующая совместимость полученных продуктов.
     /// </summary>
-    class ConcreteFactory1 : IAbstractFactory
+    class ConcreteFactoryVideo : IAbstractFactory
     {
-        public IAbstractProductA CreateProductA()
+        public IAbstractHighQuality CreateHighQuality()
         {
-            return new ConcreteProductA1();
+            return new ConcreteHighQualityVideo();
         }
 
-        public IAbstractProductB CreateProductB()
+        public IAbstractLowQuality CreateLowQuality()
         {
-            return new ConcreteProductB1();
+            return new ConcreteLowQualityVideo();
         }
     }
 
     /// <summary>
-    /// Конкретная фабрика 1, гарантирующая совместимость полученных продуктов.
+    /// Фабрика аудиофайлов, гарантирующая совместимость полученных продуктов.
     /// </summary>
-    class ConcreteFactory2 : IAbstractFactory
+    class ConcreteFactoryAudio : IAbstractFactory
     {
-        public IAbstractProductA CreateProductA()
+        public IAbstractHighQuality CreateHighQuality()
         {
-            return new ConcreteProductA2();
+            return new ConcreteHighQualityAudio();
         }
 
-        public IAbstractProductB CreateProductB()
+        public IAbstractLowQuality CreateLowQuality()
         {
-            return new ConcreteProductB2();
+            return new ConcreteLowQualityAudio();
         }
     }
 }

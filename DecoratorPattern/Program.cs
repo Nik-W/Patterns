@@ -6,20 +6,20 @@ namespace DecoratorPattern
     {
         static void Main(string[] args)
         {
-            IComponent component = new ConcreteComponent();
-            component.Operation();
+            IComponent component = new Chat();
+            component.SendMessage();
             Console.WriteLine();
 
-            Decorator decoratorA = new ConcreteDecoratorA(component);
-            decoratorA.Operation();
+            Decorator decoratorTelegram = new TelegramСhat(component);
+            decoratorTelegram.SendMessage();
             Console.WriteLine();
 
-            Decorator decoratorB = new ConcreteDecoratorB(component);
-            decoratorB.Operation();
+            Decorator decoratorWhatsApp = new WhatsAppChat(component);
+            decoratorWhatsApp.SendMessage();
             Console.WriteLine();
 
-            Decorator decoratorBA = new ConcreteDecoratorB(decoratorA);
-            decoratorBA.Operation();
+            Decorator decoratorAll = new WhatsAppChat(decoratorTelegram);
+            decoratorAll.SendMessage();
             Console.WriteLine();
 
             Console.ReadLine();

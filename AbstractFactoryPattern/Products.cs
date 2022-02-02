@@ -1,66 +1,66 @@
 ﻿namespace AbstractFactoryPattern
 {
     /// <summary>
-    /// Конкретный продукт А фабрики 1.
+    /// Высококачественный видеофайл.
     /// </summary>
-    class ConcreteProductA1 : IAbstractProductA
+    class ConcreteHighQualityVideo : IAbstractHighQuality
     {
-        public string UsefulFunctionA()
+        public string UsefulFunctionHighQuality()
         {
-            return "Продукт А фабрики 1.";
+            return "Высококачественный видеофайл.";
         }
     }
 
     /// <summary>
-    /// Конкретный продукт А фабрики 2.
+    /// Высококачественный аудиофайл.
     /// </summary>
-    class ConcreteProductA2 : IAbstractProductA
+    class ConcreteHighQualityAudio : IAbstractHighQuality
     {
-        public string UsefulFunctionA()
+        public string UsefulFunctionHighQuality()
         {
-            return "Продукт А фабрики 2.";
+            return "Высококачественный аудиофайл.";
         }
     }
 
     /// <summary>
-    /// Конкретный продукт В фабрики 1.
+    /// Низкокачественный видеофайл.
     /// </summary>
-    class ConcreteProductB1 : IAbstractProductB
+    class ConcreteLowQualityVideo : IAbstractLowQuality
     {
-        public string UsefulFunctionB()
+        public string UsefulFunctionLowQuality()
         {
-            return "Продукт В фабрики 1.";
+            return "Низкокачественный видеофайл.";
         }
 
         /// <summary>
-        /// Взаимодействие продукта В фабрики 1 с продуктом А.
+        /// Взаимодействие видеофайлов.
         /// </summary>
-        public string AnotherUsefulFunctionB(IAbstractProductA collaborator)
+        public string AnotherUsefulFunction(IAbstractHighQuality collaborator)
         {
-            var result = collaborator.UsefulFunctionA();
+            var result = collaborator.UsefulFunctionHighQuality();
 
-            return $"Продукт В фабрики 1 взаимодействует с: {result}";
+            return $"Низкокачественный видеофайл взаимодействует с: {result}";
         }
     }
 
     /// <summary>
-    /// Конкретный продукт В фабрики 2.
+    /// Низкокачественный аудиофайл.
     /// </summary>
-    class ConcreteProductB2 : IAbstractProductB
+    class ConcreteLowQualityAudio : IAbstractLowQuality
     {
-        public string UsefulFunctionB()
+        public string UsefulFunctionLowQuality()
         {
-            return "Продукт В фабрики 2.";
+            return "Низкокачественный аудиофайл.";
         }
 
         /// <summary>
-        /// Взаимодействие продукта В фабрики 2 с продуктом А.
+        /// Взаимодействие аудиофайлов.
         /// </summary>
-        public string AnotherUsefulFunctionB(IAbstractProductA collaborator)
+        public string AnotherUsefulFunction(IAbstractHighQuality collaborator)
         {
-            var result = collaborator.UsefulFunctionA();
+            var result = collaborator.UsefulFunctionHighQuality();
 
-            return $"Продукт В фабрики 2 взаимодействует с: {result}";
+            return $"Низкокачественный аудиофайл взаимодействует с: {result}";
         }
     }
 }

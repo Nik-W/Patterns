@@ -5,26 +5,26 @@
     /// </summary>
     public interface IAbstractFactory
     {
-        IAbstractProductA CreateProductA();
+        IAbstractHighQuality CreateHighQuality();
 
-        IAbstractProductB CreateProductB();
+        IAbstractLowQuality CreateLowQuality();
     }
 
     /// <summary>
-    /// Базовый интерфейс продукта А.
+    /// Базовый интерфейс высококачественных файлов.
     /// </summary>
-    public interface IAbstractProductA
+    public interface IAbstractHighQuality
     {
-        string UsefulFunctionA();
+        string UsefulFunctionHighQuality();
     }
 
     /// <summary>
-    /// Базовый интерфейс продукта В.
+    /// Базовый интерфейс низкокачественных файлов.
     /// </summary>
-    public interface IAbstractProductB
+    public interface IAbstractLowQuality
     {
-        string UsefulFunctionB();
+        string UsefulFunctionLowQuality();
 
-        string AnotherUsefulFunctionB(IAbstractProductA collaborator);
+        string AnotherUsefulFunction(IAbstractHighQuality collaborator);
     }
 }

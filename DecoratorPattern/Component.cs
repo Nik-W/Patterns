@@ -7,20 +7,20 @@ namespace DecoratorPattern
     /// </summary>
     interface IComponent
     {
-        void Operation();
+        void SendMessage();
     }
 
     /// <summary>
-    /// Конкретный компонент.
+    /// Чат.
     /// </summary>
-    class ConcreteComponent : IComponent
+    class Chat : IComponent
     {
         /// <summary>
-        /// Базовая логика.
+        /// Отправить сообщение.
         /// </summary>
-        public void Operation()
+        public void SendMessage()
         {
-            Console.WriteLine("Поведение по умолчанию.");
+            Console.WriteLine("Отправка сообщения.");
         }
     }
 }

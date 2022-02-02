@@ -6,12 +6,12 @@ namespace AbstractFactoryPattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Тестирование продуктов фабрики 1.");
-            ClientMethod(new ConcreteFactory1());
+            Console.WriteLine("Тестирование видеофайлов.");
+            ClientMethod(new ConcreteFactoryVideo());
             Console.WriteLine();
 
-            Console.WriteLine("Тестирование продуктов фабрики 2.");
-            ClientMethod(new ConcreteFactory2());
+            Console.WriteLine("Тестирование аудиофайлов.");
+            ClientMethod(new ConcreteFactoryAudio());
 
             Console.ReadLine();
         }
@@ -21,12 +21,12 @@ namespace AbstractFactoryPattern
         /// </summary>
         public static void ClientMethod(IAbstractFactory factory)
         {
-            var productA = factory.CreateProductA();
-            var productB = factory.CreateProductB();
+            var productA = factory.CreateHighQuality();
+            var productB = factory.CreateLowQuality();
 
-            Console.WriteLine(productB.UsefulFunctionB());
-            Console.WriteLine(productB.AnotherUsefulFunctionB(productA));
-            Console.WriteLine(productA.UsefulFunctionA());
+            Console.WriteLine(productB.UsefulFunctionLowQuality());
+            Console.WriteLine(productB.AnotherUsefulFunction(productA));
+            Console.WriteLine(productA.UsefulFunctionHighQuality());
         }
     }
 }

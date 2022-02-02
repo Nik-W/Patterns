@@ -21,42 +21,42 @@ namespace DecoratorPattern
         }
 
         /// <summary>
-        /// Логика.
+        /// Отправить сообщение.
         /// </summary>
-        public abstract void Operation();
+        public abstract void SendMessage();
     }
 
     /// <summary>
     /// Декоратор А.
     /// </summary>
-    class ConcreteDecoratorA : Decorator
+    class TelegramСhat : Decorator
     {
-        public ConcreteDecoratorA(IComponent component) : base(component) { }
+        public TelegramСhat(IComponent component) : base(component) { }
 
         /// <summary>
         /// Логика.
         /// </summary>
-        public override void Operation()
+        public override void SendMessage()
         {
-            _component.Operation();
-            Console.WriteLine("Логика с Декоратором А.");
+            _component.SendMessage();
+            Console.WriteLine("Отправка сообщения в Telegram.");
         }
     }
 
     /// <summary>
     /// Декоратор В.
     /// </summary>
-    class ConcreteDecoratorB : Decorator
+    class WhatsAppChat : Decorator
     {
-        public ConcreteDecoratorB(IComponent component) : base(component) { }
+        public WhatsAppChat(IComponent component) : base(component) { }
 
         /// <summary>
         /// Логика.
         /// </summary>
-        public override void Operation()
+        public override void SendMessage()
         {
-            _component.Operation();
-            Console.WriteLine("Логика с Декоратором В.");
+            _component.SendMessage();
+            Console.WriteLine("Отправка сообщения в WhatsApp.");
         }
     }
 }

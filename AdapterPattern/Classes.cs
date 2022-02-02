@@ -14,11 +14,11 @@
     /// <summary>
     /// Изначальный класс, к которому нужно применить Адаптер.
     /// </summary>
-    class Adaptee
+    class ContactAdaptee
     {
         public string GetSpecificRequest()
         {
-            return "Специфическая функциональность";
+            return "Функцональность Контакта";
         }
     }
 
@@ -30,11 +30,11 @@
         /// <summary>
         /// Адаптируемый класс.
         /// </summary>
-        private readonly Adaptee _adaptee;
+        private readonly ContactAdaptee _contactAdaptee;
 
-        public Adapter(Adaptee adaptee)
+        public Adapter(ContactAdaptee contactAdaptee)
         {
-            _adaptee = adaptee;
+            _contactAdaptee = contactAdaptee;
         }
 
         /// <summary>
@@ -42,7 +42,7 @@
         /// </summary>
         public string GetRequest()
         {
-            return $"Адаптер работает и использует '{_adaptee.GetSpecificRequest()}'";
+            return $"Адаптер работает и использует '{_contactAdaptee.GetSpecificRequest()}'";
         }
     }
 }
